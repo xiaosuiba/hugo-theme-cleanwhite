@@ -58,6 +58,10 @@
                 </header>
                 {{.TableOfContents}}
                 {{ end }}
+                <!--Translator-->
+                {{ if .Params.translator }}
+                {{ partial "translate.html" . }}
+                {{ end }}
                 {{ .Content }}
 
                 {{ if .Site.Params.reward }}
